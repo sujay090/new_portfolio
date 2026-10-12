@@ -1,7 +1,7 @@
 import { SectionLabel } from "./shared";
 import { skills } from "./data";
 export function TechStack() { return (
-        <section className="mx-auto w-[min(1100px,calc(100%-64px))] pt-[145px]" id="tech-stack">
+        <section className="mx-auto max-w-[1300px] px-2 pt-[145px]" id="tech-stack">
           <div className="flex items-end justify-between gap-[50px]">
             <div>
               <SectionLabel>Tech stack</SectionLabel>

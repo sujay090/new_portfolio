@@ -1,6 +1,6 @@
 import { SectionLabel } from "./shared";
 export function GithubActivity() { return (
-        <section className="mx-auto w-[min(1100px,calc(100%-64px))] pt-[145px]">
+        <section className="mx-auto max-w-[1300px] px-2 pt-[145px]">
           <div className="flex items-end justify-between gap-[50px]">
             <div>
               <SectionLabel>GitHub</SectionLabel>

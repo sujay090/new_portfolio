@@ -5,7 +5,7 @@ type FormState = { name: string; email: string; projectType: string; message: st
 type Status = { type: "" | "loading" | "success" | "error"; text: string };
 type ContactProps = { form: FormState; status: Status; handleSubmit: (event: FormEvent<HTMLFormElement>) => Promise<void>; updateForm: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void };
 export function Contact({ form, status, handleSubmit, updateForm }: ContactProps) { return (
-        <section className="mx-auto w-[min(1100px,calc(100%-64px))] grid grid-cols-[.8fr_1.2fr] items-center gap-[90px] py-[160px]" id="contact">
+        <section className="mx-auto grid max-w-[1300px] grid-cols-[.8fr_1.2fr] items-center gap-[90px] px-2 py-[160px]" id="contact">
           <div className="">
             <SectionLabel>Contact</SectionLabel>
             <h2>

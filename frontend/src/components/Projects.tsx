@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { SectionLabel } from "./shared";
 import { projects } from "./data";
 export function Projects() { return (
-        <section className="mx-auto w-[min(1100px,calc(100%-64px))] pt-[150px]" id="projects">
+        <section className="mx-auto max-w-[1300px] px-2 pt-[150px]" id="projects">
           <div className="flex items-end justify-between gap-[50px] items-end">
             <div>
               <SectionLabel>Projects</SectionLabel>

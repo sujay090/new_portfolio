@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowUpRight } from "lucide-react";
 export function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-[13px] text-[9px] uppercase tracking-[.2em] text-[#49a8ff]">
+    <p className="mb-[13px] text-[10px] uppercase tracking-[.2em] text-[#49a8ff]">
       {children}
     </p>
   );

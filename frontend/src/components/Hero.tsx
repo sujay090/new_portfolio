@@ -115,8 +115,8 @@ function CodingCard() {
 export function Hero() {
   return (
     <section className="min-h-[calc(100svh-7rem)]">
-      <div className="mx-auto grid w-[min(1280px,calc(100%-64px))] grid-cols-[.9fr_1.6fr_.88fr] items-center gap-8 pt-20 max-xl:grid-cols-[.85fr_1.35fr_.8fr] max-lg:grid-cols-2 max-lg:gap-5 max-md:block max-md:pt-14">
-        <div className="relative z-10 max-lg:col-span-1">
+      <div className="mx-auto grid max-w-[1300px] grid-cols-[.9fr_1.6fr_.88fr] items-center gap-8 px-2 pt-20 max-xl:grid-cols-[.85fr_1.35fr_.8fr] max-lg:grid-cols-2 max-lg:gap-5 max-md:block max-md:pt-14">
+        <div className="relative z-10 animate-hero-enter max-lg:col-span-1">
           <Greeting />
           <h1 className="font-sans text-[clamp(64px,6.3vw,92px)] font-extrabold leading-[.86] tracking-[-.075em] text-[#f4f5f2]">
             Sujay
@@ -160,20 +160,20 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative h-[650px] max-lg:col-span-1 max-md:mt-10 max-md:h-[520px]">
+        <div className="relative h-[650px] animate-hero-enter [animation-delay:180ms] max-lg:col-span-1 max-md:mt-10 max-md:h-[520px]">
           <img
             src="/hero-chalk-stroke-v1.avif"
             alt=""
             aria-hidden="true"
-            className="absolute left-[4%] top-[11%] z-0 h-[58%] w-[42%] object-contain opacity-75"
+            className="absolute left-[4%] top-[11%] z-0 h-[58%] w-[42%] animate-hero-drift-slow object-contain opacity-75"
           />
           <img
             src="/hero-plant-v1.avif"
             alt=""
             aria-hidden="true"
-            className="absolute bottom-[7%] right-[3%] z-0 h-[62%] w-[42%] object-contain object-bottom opacity-90"
+            className="absolute bottom-[7%] right-[3%] z-0 h-[62%] w-[42%] animate-hero-drift-reverse object-contain object-bottom opacity-90"
           />
-          <div className="absolute right-[2%] top-[12%] z-10 font-hand text-[18px] leading-tight text-[#aeb8b5]">
+          <div className="absolute right-[2%] top-[12%] z-10 animate-hero-drift-slow font-hand text-[18px] leading-tight text-[#aeb8b5]">
             Same
             <br />
             Developer.
@@ -197,9 +197,9 @@ export function Hero() {
         </div>
 
         <div className="flex flex-col gap-4 max-lg:col-span-2 max-lg:grid max-lg:grid-cols-3 max-md:mt-8 max-md:block">
-          <FocusCard />
-          <LearningCard />
-          <CodingCard />
+          <div className="animate-hero-enter [animation-delay:320ms]"><FocusCard /></div>
+          <div className="animate-hero-enter [animation-delay:460ms]"><LearningCard /></div>
+          <div className="animate-hero-enter [animation-delay:600ms]"><CodingCard /></div>
         </div>
       </div>
     </section>

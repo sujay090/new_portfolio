@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import { SectionLabel } from "./shared";
 export function Education() { return (
-        <section className="mx-auto w-[min(1100px,calc(100%-64px))] pt-[150px]" id="education">
+        <section className="mx-auto max-w-[1300px] px-2 pt-[150px]" id="education">
           <div className="flex items-end justify-between gap-[50px]">
             <div>
               <SectionLabel>Education</SectionLabel>

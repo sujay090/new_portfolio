@@ -29,12 +29,41 @@
   --font-mono: "Geist Mono", monospace;
   --font-hand: "Caveat", cursive;
   --animate-float: float 12s ease-in-out infinite;
+  --animate-hero-enter: hero-enter 900ms cubic-bezier(.22,1,.36,1) both;
+  --animate-hero-drift-slow: hero-drift 11s ease-in-out infinite;
+  --animate-hero-drift-reverse: hero-drift-reverse 14s ease-in-out infinite;
   @keyframes float {
     0%, 100% {
       transform: translateY(0);
     }
     50% {
       transform: translateY(-5px);
+    }
+    @keyframes hero-enter {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes hero-drift {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+    @keyframes hero-drift-reverse {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(4px);
+      }
     }
   }
 }
