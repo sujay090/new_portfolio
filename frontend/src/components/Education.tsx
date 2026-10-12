@@ -42,15 +42,15 @@ export function Education() {
             </p>
 
             <div className="mt-8 border-l border-[#263836] pl-6 sm:pl-8">
-              <article className="relative pb-8">
+              <article className="relative">
                 <span className="absolute -left-[31px] top-1 size-[13px] rounded-full border-2 border-[#07100b] bg-[#5ce688] shadow-[0_0_0_2px_#1eae65,0_0_12px_#39e77f] sm:-left-[39px]" />
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="text-[20px] font-bold leading-tight tracking-[-.03em] text-[#e9efec]">
-                      Master of Computer Applications (MCA)
+                      Bachelor of Computer Applications (BCA)
                     </h3>
                     <p className="mt-2 text-[12px] font-semibold text-[#42a9ff]">
-                      University Institute of Technology, RGPV (UIT)
+                      Maulana Abul Kalam Azad University
                     </p>
                   </div>
                   <span className="hidden shrink-0 rounded-full border border-[#164d2e] px-3 py-1 text-[9px] font-bold uppercase tracking-[.12em] text-[#54dd83] sm:block">
@@ -58,35 +58,11 @@ export function Education() {
                   </span>
                 </div>
                 <p className="mt-2 text-[11px] text-[#8d9995]">
-                  2026 — 2028&nbsp; | &nbsp;Bhopal, India
+                  Currently pursuing&nbsp; | &nbsp;West Bengal, India
                 </p>
                 <p className="mt-3 text-[12px] leading-5 text-[#8d9995]">
-                  Focused on software development, system design, distributed
-                  systems and cloud technologies.
-                </p>
-              </article>
-
-              <article className="relative">
-                <span className="absolute -left-[31px] top-1 size-[13px] rounded-full border-2 border-[#07100b] bg-[#3299ff] shadow-[0_0_0_2px_#1d66b0,0_0_12px_#3299ff] sm:-left-[39px]" />
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-[20px] font-bold leading-tight tracking-[-.03em] text-[#e9efec]">
-                      Bachelor of Computer Applications (BCA)
-                    </h3>
-                    <p className="mt-2 text-[12px] font-semibold text-[#42a9ff]">
-                      Jagran Lakshmibai University
-                    </p>
-                  </div>
-                  <span className="hidden shrink-0 rounded-full border border-[#2b3533] px-3 py-1 text-[9px] font-bold uppercase tracking-[.12em] text-[#9ca6a3] sm:block">
-                    Completed
-                  </span>
-                </div>
-                <p className="mt-2 text-[11px] text-[#8d9995]">
-                  2022 — 2025&nbsp; | &nbsp;Bhopal, India&nbsp; | &nbsp;CGPA 8.0 / 10.0
-                </p>
-                <p className="mt-3 text-[12px] leading-5 text-[#8d9995]">
-                  Built a strong foundation in programming, web development and
-                  problem solving.
+                  Building a strong foundation in programming, web development
+                  and problem solving.
                 </p>
               </article>
             </div>

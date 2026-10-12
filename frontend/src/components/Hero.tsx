@@ -115,7 +115,7 @@ function CodingCard() {
 export function Hero() {
   return (
     <section className="min-h-[calc(100svh-7rem)]">
-      <div className="mx-auto grid max-w-[1300px] grid-cols-[.9fr_1.6fr_.88fr] items-center gap-8 px-2 pt-20 max-xl:grid-cols-[.85fr_1.35fr_.8fr] max-lg:grid-cols-2 max-lg:gap-5 max-md:block max-md:pt-14">
+      <div className="hero-section-drift mx-auto grid max-w-[1300px] grid-cols-[.9fr_1.6fr_.88fr] items-center gap-8 px-2 pt-20 max-xl:grid-cols-[.85fr_1.35fr_.8fr] max-lg:grid-cols-2 max-lg:gap-5 max-md:block max-md:pt-14">
         <div className="relative z-10 animate-hero-enter max-lg:col-span-1">
           <Greeting />
           <h1 className="font-sans text-[clamp(64px,6.3vw,92px)] font-extrabold leading-[.86] tracking-[-.075em] text-[#f4f5f2]">

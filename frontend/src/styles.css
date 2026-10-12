@@ -188,3 +188,22 @@ html {
       animation: none;
     }
   }
+
+  @keyframes hero-section-drift {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(2px, -3px, 0);
+    }
+  }
+
+  .hero-section-drift {
+    animation: hero-section-drift 12s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-section-drift {
+      animation: none;
+    }
+  }
