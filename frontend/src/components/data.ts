@@ -50,10 +50,10 @@ export const projects: Project[] = [
 ];
 
 export const skills = [
-  ["Languages", "JavaScript", "TypeScript", "Python"],
+  ["Languages", "JavaScript", "TypeScript", "Python", "Go"],
   ["Frontend", "React", "Next.js", "Tailwind"],
   ["Backend", "Node.js", "Express", "FastAPI"],
   ["Database", "Postgres", "MongoDB", "Redis"],
-  ["Cloud & DevOps", "AWS", "Docker", "GitHub"],
-  ["Mobile", "React Native", "Expo", "Kotlin"],
+  ["Cloud & DevOps", "AWS", "Cloudflare", "Firebase"],
+  ["Mobile", "Android", "Kotlin"],
 ];

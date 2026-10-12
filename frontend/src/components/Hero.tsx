@@ -140,8 +140,8 @@ export function Hero() {
             <Button href="#projects">View My Work</Button>
             <a
               className="inline-flex items-center gap-2 rounded border border-[#344041] px-4 py-3 text-[11px] font-semibold text-[#dce4e0] transition hover:border-[#49a8ff] hover:text-[#49a8ff]"
-              href="/Kunal-Rathore-Resume.pdf"
-              download
+              href="/Sujay_Pradhan_Resume.pdf"
+              download="Sujay_Pradhan_Resume.pdf"
             >
               <ArrowDownToLine size={14} />
               Download Resume
@@ -197,9 +197,15 @@ export function Hero() {
         </div>
 
         <div className="flex flex-col gap-4 max-lg:col-span-2 max-lg:grid max-lg:grid-cols-3 max-md:mt-8 max-md:block">
-          <div className="animate-hero-enter [animation-delay:320ms]"><FocusCard /></div>
-          <div className="animate-hero-enter [animation-delay:460ms]"><LearningCard /></div>
-          <div className="animate-hero-enter [animation-delay:600ms]"><CodingCard /></div>
+          <div className="animate-hero-enter [animation-delay:320ms]">
+            <FocusCard />
+          </div>
+          <div className="animate-hero-enter [animation-delay:460ms]">
+            <LearningCard />
+          </div>
+          <div className="animate-hero-enter [animation-delay:600ms]">
+            <CodingCard />
+          </div>
         </div>
       </div>
     </section>

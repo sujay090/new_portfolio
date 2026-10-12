@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @font-face {
   font-family: "Geist";
   src: url("/fonts/geist.woff2") format("woff2");
@@ -66,4 +76,115 @@
       }
     }
   }
-}
+  }
+
+  @keyframes contact-channel-drift {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    25% {
+      transform: translate3d(3px, -3px, 0);
+    }
+    50% {
+      transform: translate3d(-2px, -5px, 0);
+    }
+    75% {
+      transform: translate3d(-4px, 2px, 0);
+    }
+  }
+
+  @keyframes contact-channel-drift-reverse {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    25% {
+      transform: translate3d(-3px, 2px, 0);
+    }
+    50% {
+      transform: translate3d(3px, 4px, 0);
+    }
+    75% {
+      transform: translate3d(4px, -2px, 0);
+    }
+  }
+
+  @keyframes contact-channel-orbit {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotate(-20deg) scale(1);
+      opacity: .7;
+    }
+    50% {
+      transform: translate3d(5px, -3px, 0) rotate(-14deg) scale(1.04);
+      opacity: 1;
+    }
+  }
+
+  .contact-channel-node--brief {
+    animation: contact-channel-drift 6s ease-in-out infinite;
+  }
+
+  .contact-channel-node--impact {
+    animation: contact-channel-drift-reverse 6.5s ease-in-out infinite;
+  }
+
+  .contact-channel-orbit {
+    animation: contact-channel-orbit 8s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-channel-node--brief,
+    .contact-channel-node--impact,
+    .contact-channel-orbit {
+      animation: none;
+    }
+  }
+
+  @keyframes footer-commit-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes footer-commit-pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 12px rgba(92, 230, 136, .35);
+    }
+    50% {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(92, 230, 136, .55);
+    }
+  }
+
+  @keyframes footer-commit-arrow {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(2px, -2px);
+    }
+  }
+
+  .footer-commit-ring--outer {
+    animation: footer-commit-spin 14s linear infinite;
+  }
+
+  .footer-commit-ring--inner {
+    animation: footer-commit-spin 9s linear infinite reverse;
+  }
+
+  .footer-commit-core {
+    animation: footer-commit-pulse 3s ease-in-out infinite;
+  }
+
+  .footer-commit-arrow {
+    animation: footer-commit-arrow 1.8s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-commit-ring,
+    .footer-commit-core,
+    .footer-commit-arrow {
+      animation: none;
+    }
+  }

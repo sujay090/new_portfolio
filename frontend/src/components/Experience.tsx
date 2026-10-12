@@ -114,7 +114,9 @@ export function Experience() {
                   Full Stack Developer
                 </h3>
                 <p className="mt-2 text-[10px] leading-none text-[#83918e]">
-                  <span className="font-semibold text-[#49a8ff]">Freelance</span>
+                  <span className="font-semibold text-[#49a8ff]">
+                    Freelance
+                  </span>
                   <span className="mx-2">·</span>2022 — Present
                 </p>
                 <p className="mt-4 text-[11px] leading-[1.45] text-[#a4aaa9]">
