@@ -42,7 +42,7 @@ export function Contact({
       className="mt-[120px] w-full border-t border-[#ffffff12]"
       id="contact"
     >
-      <div className="mx-auto max-w-[1300px] px-2 py-[90px]">
+      <div className="mx-auto max-w-[1300px] px-2 py-[90px]" data-reveal="up">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[.78fr_1.22fr] lg:gap-[70px]">
           <div className="relative">
             <SectionLabel>Contact</SectionLabel>

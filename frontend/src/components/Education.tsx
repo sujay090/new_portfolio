@@ -30,7 +30,7 @@ export function Education() {
       className="mt-[120px] w-full border-t border-[#ffffff12]"
       id="education"
     >
-      <div className="mx-auto max-w-[1300px] px-2 pt-[90px]">
+      <div className="mx-auto max-w-[1300px] px-2 pt-[90px]" data-reveal="up">
         <div className="relative grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_.85fr]">
           <div>
             <SectionLabel>Education</SectionLabel>

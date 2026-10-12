@@ -13,7 +13,7 @@ export function Experience() {
 
   return (
     <section className="w-full border-t border-[#ffffff12]" id="experience">
-      <div className="mx-auto max-w-[1300px] px-2 pt-[50px]">
+      <div className="mx-auto max-w-[1300px] px-2 pt-[50px]" data-reveal="up">
         <div className="flex items-end justify-between gap-[50px]">
           <div>
             <SectionLabel>Experience</SectionLabel>

@@ -144,7 +144,7 @@ export function TechStack() {
       className="mt-[120px] w-full border-t border-[#ffffff12]"
       id="tech-stack"
     >
-      <div className="mx-auto max-w-[1300px] px-2 pt-[90px]">
+      <div className="mx-auto max-w-[1300px] px-2 pt-[90px]" data-reveal="up">
         <div className="flex items-end justify-between gap-8">
           <div>
             <SectionLabel>Tech stack</SectionLabel>

@@ -27,7 +27,7 @@ const levels = [
 export function GithubActivity() {
   return (
     <section className="mt-[120px] w-full border-t border-[#ffffff12]">
-      <div className="mx-auto max-w-[1300px] px-2 pt-[80px]">
+      <div className="mx-auto max-w-[1300px] px-2 pt-[80px]" data-reveal="up">
         <div className="flex items-end justify-between gap-8">
           <div>
             <SectionLabel>GitHub</SectionLabel>

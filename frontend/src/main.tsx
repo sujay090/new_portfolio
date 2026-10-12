@@ -1,4 +1,4 @@
-import { type ChangeEvent, type FormEvent, useState } from "react";
+import { type ChangeEvent, type FormEvent, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { Contact } from "./components/Contact";
 import { Education } from "./components/Education";
@@ -18,6 +18,25 @@ type FormState = {
 };
 type Status = { type: "" | "loading" | "success" | "error"; text: string };
 function App() {
+  useEffect(() => {
+    const revealElements = document.querySelectorAll<HTMLElement>("[data-reveal]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+          } else {
+            entry.target.classList.remove("reveal-visible");
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -35px" },
+    );
+
+    revealElements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
