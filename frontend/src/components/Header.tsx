@@ -11,7 +11,7 @@ const links = [
 ] as const;
 
 function Brand() {
-  const homePrefix = window.location.pathname === "/projects" ? "/" : "";
+  const homePrefix = window.location.pathname.replace(/\/+$/, "") === "/projects" ? "/" : "";
 
   return (
     <a
@@ -39,7 +39,7 @@ function Brand() {
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const homePrefix = window.location.pathname === "/projects" ? "/" : "";
+  const homePrefix = window.location.pathname.replace(/\/+$/, "") === "/projects" ? "/" : "";
 
   return (
     <header className="relative z-20 mx-auto grid h-[86px] max-w-[1300px] grid-cols-[1fr_auto_1fr] items-center px-2">
