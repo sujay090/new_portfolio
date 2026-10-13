@@ -80,7 +80,7 @@ function App() {
       ...current,
       [event.target.name]: event.target.value,
     }));
-  if (window.location.pathname === "/projects") {
+  if (window.location.pathname.replace(/\/+$/, "") === "/projects") {
     return <AllProjects />;
   }
   return (
