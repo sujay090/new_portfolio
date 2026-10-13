@@ -11,7 +11,7 @@ import { Button } from "./shared";
 
 function Greeting() {
   return (
-    <p className="mb-5 flex items-center gap-2 font-hand text-[25px] leading-none text-[#f1f2ed]">
+    <p className="mb-5 flex items-center gap-2 font-hand text-[clamp(21px,3vw,25px)] leading-none text-[#f1f2ed]">
       <span aria-hidden="true" className="h-px w-4 bg-[#49a8ff]" />
       Hi, I&apos;m
       <span aria-hidden="true" className="h-px w-7 bg-[#49a8ff]" />
@@ -115,9 +115,9 @@ function CodingCard() {
 export function Hero() {
   return (
     <section className="min-h-[calc(100svh-7rem)]">
-      <div className="hero-section-drift mx-auto grid max-w-[1300px] grid-cols-[.9fr_1.6fr_.88fr] items-center gap-8 px-2 pt-20 max-xl:grid-cols-[.85fr_1.35fr_.8fr] max-lg:grid-cols-2 max-lg:gap-5 max-md:block max-md:pt-14">
+      <div className="hero-section-drift mx-auto grid max-w-[1300px] grid-cols-[.9fr_1.6fr_.88fr] items-center gap-8 px-4 pt-16 sm:px-6 sm:pt-20 lg:px-2 max-xl:grid-cols-[.85fr_1.35fr_.8fr] max-xl:gap-6 max-lg:grid-cols-2 max-lg:items-start max-lg:gap-5 max-md:block max-md:pt-12">
         <div
-          className="relative z-10 animate-hero-enter max-lg:col-span-1"
+          className="relative z-10 animate-hero-enter max-lg:col-span-1 max-md:text-center"
           data-reveal="left"
         >
           <Greeting />
@@ -126,7 +126,7 @@ export function Hero() {
             <br />
             Pradhan
           </h1>
-          <p className="mt-8 text-center font-hand text-[30px] leading-[1.25] text-[#f1f2ed]">
+          <p className="mt-8 text-center font-hand text-[clamp(25px,3vw,30px)] leading-[1.25] text-[#f1f2ed]">
             Building useful things
             <br />
             <span className="relative">
@@ -134,12 +134,12 @@ export function Hero() {
               <span className="absolute -bottom-2 left-1/2 h-px w-36 -translate-x-1/2 rotate-[-5deg] bg-[#5ce688]" />
             </span>
           </p>
-          <p className="mt-9 max-w-[330px] text-[13px] leading-6 text-[#9ba6a3]">
+          <p className="mx-auto mt-9 max-w-[330px] text-[13px] leading-6 text-[#9ba6a3] md:mx-0">
             I&apos;m a full-stack developer who loves turning ideas into
             real-world products. Currently exploring cloud, distributed systems
             and everything in between.
           </p>
-          <div className="mt-7 flex items-center gap-3">
+          <div className="mt-7 flex flex-wrap items-center gap-3 max-md:justify-center">
             <Button href="#projects">View My Work</Button>
             <a
               className="inline-flex items-center gap-2 rounded border border-[#344041] px-4 py-3 text-[11px] font-semibold text-[#dce4e0] transition hover:border-[#49a8ff] hover:text-[#49a8ff]"
@@ -150,7 +150,7 @@ export function Hero() {
               Download Resume
             </a>
           </div>
-          <div className="mt-8 flex gap-6 text-[#dbe4df]">
+          <div className="mt-8 flex gap-6 text-[#dbe4df] max-md:justify-center">
             <a href="https://github.com" aria-label="GitHub">
               <Github size={18} />
             </a>
@@ -164,7 +164,7 @@ export function Hero() {
         </div>
 
         <div
-          className="relative h-[650px] animate-hero-enter [animation-delay:180ms] max-lg:col-span-1 max-md:mt-10 max-md:h-[520px]"
+          className="relative h-[min(650px,calc(100svh-130px))] min-h-[520px] animate-hero-enter [animation-delay:180ms] max-lg:col-span-1 max-lg:w-full max-md:mt-8 max-md:h-[clamp(390px,105vw,520px)] max-md:min-h-0"
           data-reveal="up"
         >
           <img
@@ -179,7 +179,7 @@ export function Hero() {
             aria-hidden="true"
             className="absolute bottom-[7%] right-[3%] z-0 h-[62%] w-[42%] animate-hero-drift-reverse object-contain object-bottom opacity-90"
           />
-          <div className="absolute right-[2%] top-[12%] z-10 animate-hero-drift-slow font-hand text-[18px] leading-tight text-[#aeb8b5]">
+          <div className="absolute right-[2%] top-[12%] z-10 animate-hero-drift-slow font-hand text-[clamp(15px,2vw,18px)] leading-tight text-[#aeb8b5] max-md:right-0 max-md:top-[8%]">
             Same
             <br />
             Developer.
@@ -203,7 +203,7 @@ export function Hero() {
         </div>
 
         <div
-          className="flex flex-col gap-4 max-lg:col-span-2 max-lg:grid max-lg:grid-cols-3 max-md:mt-8 max-md:block"
+          className="flex flex-col gap-4 max-lg:col-span-2 max-lg:grid max-lg:grid-cols-3 max-md:mt-8 max-md:block max-md:space-y-4"
           data-reveal="right"
         >
           <div className="animate-hero-enter [animation-delay:320ms]">

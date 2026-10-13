@@ -42,11 +42,11 @@ export function Contact({
       className="mt-[120px] w-full border-t border-[#ffffff12]"
       id="contact"
     >
-      <div className="mx-auto max-w-[1300px] px-2 py-[90px]" data-reveal="up">
+      <div className="mx-auto max-w-[1300px] px-4 py-16 sm:px-6 sm:py-[90px] lg:px-2" data-reveal="up">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[.78fr_1.22fr] lg:gap-[70px]">
           <div className="relative">
             <SectionLabel>Contact</SectionLabel>
-            <h2 className="mt-3 max-w-[570px] font-sans text-[clamp(43px,5vw,64px)] font-extrabold leading-[.84] tracking-[-.07em] text-[#f4f5f2]">
+            <h2 className="mt-3 max-w-[570px] font-sans text-[clamp(40px,6vw,64px)] font-extrabold leading-[.84] tracking-[-.07em] text-[#f4f5f2]">
               <span className="whitespace-nowrap">
                 Let&apos;s Build{" "}
                 <span className="text-[#49a8ff]">Something</span>
@@ -103,7 +103,7 @@ export function Contact({
               </span>
             </div>
 
-            <div className="mt-16 ml-auto mr-8 max-w-[170px] font-hand text-[21px] italic leading-[.9] text-[#a0aaa7]">
+            <div className="mt-12 ml-auto mr-4 max-w-[170px] font-hand text-[21px] italic leading-[.9] text-[#a0aaa7] sm:mt-16 sm:mr-8">
               Good People
               <br />
               Build Great Things...
@@ -159,9 +159,9 @@ export function Contact({
               className="card-hover rounded-xl border border-[#293735] bg-[#111817]/95 p-5 sm:p-6"
               onSubmit={handleSubmit}
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-start justify-between gap-4 max-sm:block">
                 <SectionLabel>Start a conversation</SectionLabel>
-                <span className="flex items-center gap-1 text-[8px] text-[#84908c]">
+                <span className="mt-2 flex items-center gap-1 text-[8px] text-[#84908c] sm:mt-0">
                   <i className="size-1.5 rounded-full bg-[#5ce688] shadow-[0_0_7px_#5ce688]" />
                   Replies within 1–2 days
                 </span>
@@ -172,7 +172,7 @@ export function Contact({
               <p className="mt-3 text-[10px] text-[#7f8b87]">
                 I&apos;m reaching out about
               </p>
-              <div className="mt-2 grid grid-cols-2 gap-2">
+              <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {["A freelance project", "A job opportunity"].map((type) => (
                   <label
                     className={`flex cursor-pointer items-center gap-2 rounded-md border px-3 py-2.5 text-[10px] ${
@@ -194,7 +194,7 @@ export function Contact({
                   </label>
                 ))}
               </div>
-              <div className="mt-3 grid grid-cols-2 gap-3">
+              <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <label className="text-[9px] text-[#9aa5a1]">
                   Your name <span className="text-[#49a8ff]">*</span>
                   <input
@@ -240,7 +240,7 @@ export function Contact({
                   placeholder="Tell me about the product, scope, and what success looks like..."
                 />
               </label>
-              <div className="mt-3 grid grid-cols-2 gap-3">
+              <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <label className="text-[9px] text-[#9aa5a1]">
                   Budget range
                   <input
@@ -258,13 +258,13 @@ export function Contact({
                   />
                 </label>
               </div>
-              <div className="mt-4 flex items-center justify-between gap-4">
+              <div className="mt-4 flex items-start justify-between gap-4 max-sm:flex-col">
                 <span className="flex items-center gap-1 text-[8px] text-[#6f7c78]">
                   <Clock3 size={11} /> Your details stay private and are only
                   used to reply.
                 </span>
                 <button
-                  className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#49a8ff] px-4 py-3 text-[10px] font-bold text-[#061724] transition hover:bg-[#6ab8ff]"
+                  className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#49a8ff] px-4 py-3 text-[10px] font-bold text-[#061724] transition hover:bg-[#6ab8ff] max-sm:w-full max-sm:justify-center"
                   disabled={status.type === "loading"}
                 >
                   {status.type === "loading"

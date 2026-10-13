@@ -144,18 +144,18 @@ export function TechStack() {
       className="mt-[120px] w-full border-t border-[#ffffff12]"
       id="tech-stack"
     >
-      <div className="mx-auto max-w-[1300px] px-2 pt-[90px]" data-reveal="up">
-        <div className="flex items-end justify-between gap-8">
+      <div className="mx-auto max-w-[1300px] px-4 pt-16 sm:px-6 sm:pt-[90px] lg:px-2" data-reveal="up">
+        <div className="flex items-end justify-between gap-8 max-md:block">
           <div>
             <SectionLabel>Tech stack</SectionLabel>
-            <h2 className="font-sans text-[clamp(44px,5vw,64px)] font-extrabold leading-[.9] tracking-[-.06em] text-[#f4f5f2]">
+            <h2 className="max-w-[720px] font-sans text-[clamp(40px,6vw,64px)] font-extrabold leading-[.9] tracking-[-.06em] text-[#f4f5f2]">
               Technologies I Work With
             </h2>
-            <p className="mt-5 text-[13px] text-[#a4aaa9]">
+            <p className="mt-5 text-[13px] leading-5 text-[#a4aaa9]">
               Tools and technologies I use to turn ideas into reality.
             </p>
           </div>
-          <div className="font-hand text-[24px] italic leading-[.95] text-[#a0aaa7]">
+          <div className="mt-7 font-hand text-[24px] italic leading-[.95] text-[#a0aaa7] md:mt-0">
             Use the right tool
             <br />
             for the right
@@ -163,7 +163,7 @@ export function TechStack() {
             problem...
             <svg
               aria-hidden="true"
-              className="mt-3 ml-16 h-[12px] w-[95px] text-[#49a8ff]"
+              className="mt-3 ml-16 h-[12px] w-[95px] text-[#49a8ff] max-sm:ml-8"
               viewBox="0 0 110 18"
               fill="none"
             >
@@ -183,16 +183,16 @@ export function TechStack() {
             </svg>
           </div>
         </div>
-        <div className="mt-7 grid grid-cols-1 gap-3 md:grid-cols-3">
+        <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map(([label, ...items], index) => (
             <div
-              className={`card-hover flex min-h-[80px] items-center justify-between rounded-lg border border-[rgba(181,206,203,.13)] px-[18px] ${cardGradients[index]}`}
+              className={`card-hover flex min-h-[80px] min-w-0 items-center justify-between gap-4 rounded-lg border border-[rgba(181,206,203,.13)] px-4 sm:px-[18px] ${cardGradients[index]}`}
               key={label}
             >
               <span className="text-[12px] font-semibold text-[#d7dfdc]">
                 {label}
               </span>
-              <div className="flex items-center gap-5">
+              <div className="flex min-w-0 items-center gap-3 sm:gap-5">
                 {items.map((item, index) => (
                   <TechIcon key={item} name={item} />
                 ))}

@@ -27,11 +27,11 @@ const levels = [
 export function GithubActivity() {
   return (
     <section className="mt-[120px] w-full border-t border-[#ffffff12]">
-      <div className="mx-auto max-w-[1300px] px-2 pt-[80px]" data-reveal="up">
-        <div className="flex items-end justify-between gap-8">
+      <div className="mx-auto max-w-[1300px] px-4 pt-16 sm:px-6 sm:pt-[80px] lg:px-2" data-reveal="up">
+        <div className="flex items-end justify-between gap-8 max-lg:block">
           <div>
             <SectionLabel>GitHub</SectionLabel>
-            <h2 className="font-sans text-[clamp(48px,5vw,68px)] font-extrabold leading-[.9] tracking-[-.06em] text-[#f4f5f2]">
+            <h2 className="font-sans text-[clamp(42px,6vw,68px)] font-extrabold leading-[.9] tracking-[-.06em] text-[#f4f5f2]">
               Code. Commit.{" "}
               <em className="not-italic text-[#5ce688]">Repeat.</em>
             </h2>
@@ -39,8 +39,8 @@ export function GithubActivity() {
               Consistent commits, steady progress, lifelong learning.
             </p>
           </div>
-          <div className="flex shrink-0 gap-7 pb-1 text-[#83918e]">
-            <div className="flex items-start gap-2">
+          <div className="mt-8 grid grid-cols-3 gap-3 pb-1 text-[#83918e] lg:mt-0 lg:flex lg:shrink-0 lg:gap-7">
+            <div className="flex items-start gap-2 max-sm:block">
               <Github size={22} className="text-[#f0f5f3]" />
               <span className="font-mono text-[9px]">
                 <strong className="text-[20px] text-[#f0f5f3]">114</strong>
@@ -48,7 +48,7 @@ export function GithubActivity() {
                 Total Contributions
               </span>
             </div>
-            <div className="flex items-start gap-2 border-l border-[#ffffff12] pl-5">
+            <div className="flex items-start gap-2 border-l border-[#ffffff12] pl-3 max-sm:block sm:pl-5">
               <Code2 size={22} className="text-[#f0f5f3]" />
               <span className="font-mono text-[9px]">
                 <strong className="text-[20px] text-[#5ce688]">10</strong> days
@@ -56,7 +56,7 @@ export function GithubActivity() {
                 Longest Streak
               </span>
             </div>
-            <div className="flex items-start gap-2 border-l border-[#ffffff12] pl-5">
+            <div className="flex items-start gap-2 border-l border-[#ffffff12] pl-3 max-sm:block sm:pl-5">
               <GitBranch size={22} className="text-[#f0f5f3]" />
               <span className="font-mono text-[9px]">
                 <strong className="text-[20px] text-[#5ce688]">9</strong>
@@ -66,18 +66,18 @@ export function GithubActivity() {
             </div>
           </div>
         </div>
-        <div className="card-hover mt-7 overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#121919]/90 p-5">
-          <div className="flex justify-between font-mono text-[9px] text-[#bdc9c5]">
+        <div className="card-hover mt-7 overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#121919]/90 p-4 sm:p-5">
+          <div className="flex flex-wrap justify-between gap-2 font-mono text-[9px] text-[#bdc9c5]">
             <span>114 contributions in 2026</span>
             <span>Current streak: 0 days</span>
           </div>
-          <div className="mt-4 grid grid-cols-[30px_1fr] gap-2">
+          <div className="mt-4 grid grid-cols-[24px_minmax(0,1fr)] gap-2 sm:grid-cols-[30px_1fr]">
             <div className="mt-5 grid grid-rows-7 gap-[5px] font-mono text-[8px] text-[#83918e]">
               {weekdays.map((day, index) => (
                 <span key={`${day}-${index}`}>{day}</span>
               ))}
             </div>
-            <div className="min-w-[900px] flex-1">
+            <div className="min-w-[720px] flex-1 overflow-x-auto pb-1 sm:min-w-[900px]">
               <div className="grid grid-cols-12 font-mono text-[8px] text-[#83918e]">
                 {months.map((month) => (
                   <span key={month}>{month}</span>

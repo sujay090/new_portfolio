@@ -42,7 +42,7 @@ export function Footer() {
 
   return (
     <footer className="mt-0 w-full border-t border-[#ffffff12] bg-[#080b0b]/80">
-      <div className="mx-auto flex min-h-[108px] max-w-[1300px] items-center justify-between gap-8 px-2 py-6 text-[#83918e]">
+      <div className="mx-auto flex min-h-[108px] max-w-[1300px] flex-wrap items-center justify-between gap-6 px-4 py-6 text-[#83918e] sm:px-6 lg:px-2">
         <div>
           <a
             className="font-hand text-[26px] italic leading-none text-[#49a8ff]"
@@ -55,7 +55,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="flex items-center gap-5">
+        <div className="flex w-full flex-wrap items-center justify-between gap-4 sm:w-auto sm:gap-5">
           <nav className="flex items-center gap-5" aria-label="Social links">
             <a
               className="transition-colors hover:text-[#f0f5f3]"
@@ -86,8 +86,8 @@ export function Footer() {
               <Instagram size={15} />
             </a>
           </nav>
-          <span className="h-5 w-px bg-[#26312f]" />
-          <span className="text-[9px] whitespace-nowrap">
+          <span className="hidden h-5 w-px bg-[#26312f] sm:block" />
+          <span className="text-[9px]">
             © 2026 Sujay Pradhan. All rights reserved.
           </span>
         </div>

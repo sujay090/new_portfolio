@@ -33,7 +33,7 @@ export function ProjectArt({ art }: { art: string }) {
   }[art] ?? "bg-[#172426]";
 
   return (
-    <div className={`relative h-[155px] overflow-hidden ${artClass} p-4`}>
+    <div className={`relative h-[clamp(140px,28vw,155px)] overflow-hidden ${artClass} p-3 sm:p-4`}>
       {art === "map" && (
         <div className="h-full rounded bg-[#9ed5d3] p-3 text-[#2d7e79]">
           <div className="h-full rounded bg-[radial-gradient(circle_at_35%_40%,#f4e6a8_0_3px,transparent_4px),linear-gradient(35deg,#9ed5d3,#d9e6bd)]" />
@@ -79,20 +79,20 @@ export function Projects() {
 
   return (
     <section className="mt-[120px] w-full border-t border-[#ffffff12]" id="projects">
-      <div className="mx-auto max-w-[1300px] px-2 pt-[90px]" data-reveal="up">
-        <div className="flex items-end justify-between gap-8">
+      <div className="mx-auto max-w-[1300px] px-4 pt-16 sm:px-6 sm:pt-[90px] lg:px-2" data-reveal="up">
+        <div className="flex items-end justify-between gap-6 max-sm:block">
           <div>
             <SectionLabel>Projects</SectionLabel>
-            <h2 className="text-[40px] font-extrabold leading-none tracking-[-.05em] text-[#f4f5f2]">
+            <h2 className="text-[clamp(36px,6vw,40px)] font-extrabold leading-none tracking-[-.05em] text-[#f4f5f2]">
               Selected Work
             </h2>
-            <p className="mt-4 text-[13px] text-[#a4aaa9]">
+            <p className="mt-4 max-w-[500px] text-[13px] leading-5 text-[#a4aaa9]">
               A few projects I have worked on that I am proud of. Each one
               taught me something new.
             </p>
           </div>
           <a
-            className="mb-1 inline-flex items-center gap-1 border-b border-[#49a8ff88] pb-2 text-[10px] font-bold text-[#49a8ff]"
+            className="mt-6 inline-flex items-center gap-1 border-b border-[#49a8ff88] pb-2 text-[10px] font-bold text-[#49a8ff] sm:mt-0 sm:mb-1"
             href="/projects"
           >
             View All Projects <ArrowRight size={15} />
@@ -100,11 +100,11 @@ export function Projects() {
         </div>
 
         <article className="card-hover relative mt-7 grid min-h-[320px] overflow-hidden rounded-lg border border-[#49a8ff55] bg-[#121919]/90 lg:grid-cols-[.9fr_1.1fr]">
-          <div className="z-10 p-7">
+          <div className="z-10 p-5 sm:p-7">
             <span className="rounded-full border border-[#49a8ff33] bg-[#49a8ff12] px-3 py-1 font-mono text-[8px] text-[#49a8ff]">
               Featured Project
             </span>
-            <h3 className="mt-6 max-w-[390px] text-[28px] font-bold leading-[1.05] tracking-[-.04em] text-[#f0f5f3]">
+            <h3 className="mt-5 max-w-[390px] text-[clamp(24px,5vw,28px)] font-bold leading-[1.05] tracking-[-.04em] text-[#f0f5f3] sm:mt-6">
               IronCloude — Cloud
               <br />
               Cloud Storage Platform
@@ -114,7 +114,7 @@ export function Projects() {
               syncing, and sharing files with role-based access control.
             </p>
             <Tags tags={["Next.js", "Node.js", "MongoDB", "Redis", "AWS", "CI/CD"]} />
-            <div className="mt-4 flex gap-2">
+            <div className="mt-4 flex flex-wrap gap-2">
               <a className="rounded bg-[#42adf4] px-4 py-3 text-[10px] font-bold text-[#071c2c]" href="https://github.com">
                 Live Demo <ArrowRight className="ml-2 inline" size={13} />
               </a>
@@ -123,7 +123,9 @@ export function Projects() {
               </a>
             </div>
           </div>
-          <ProjectArt art={featured.art} />
+          <div className="min-h-[220px] lg:min-h-[320px]">
+            <ProjectArt art={featured.art} />
+          </div>
           <div className="pointer-events-none absolute right-[15px] top-12 hidden font-hand text-[27px] leading-[.9] text-[#d7dcd9] lg:block">
             From
             <br />
@@ -142,7 +144,7 @@ export function Projects() {
               key={project.title}
             >
               <ProjectArt art={project.art} />
-              <div className="relative p-4">
+              <div className="relative min-h-[154px] p-4 pb-12">
                 <h3 className="text-[16px] font-bold text-[#f0f5f3]">{project.title}</h3>
                 <p className="mt-2 text-[10px] leading-[1.45] text-[#a4aaa9]">{project.description}</p>
                 <Tags tags={project.tags} />

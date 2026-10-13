@@ -65,20 +65,20 @@ export function Education() {
 
   return (
     <section className="mt-[120px] w-full border-t border-[#ffffff12]" id="education">
-      <div className="mx-auto max-w-[1300px] px-2 pt-[90px]" data-reveal="up">
+      <div className="mx-auto max-w-[1300px] px-4 pt-16 sm:px-6 sm:pt-[90px] lg:px-2" data-reveal="up">
         <div className="relative grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_.85fr]">
           <div>
             <SectionLabel>Education</SectionLabel>
-            <h2 className="mt-3 font-sans text-[clamp(44px,5vw,64px)] font-extrabold leading-[.9] tracking-[-.065em] text-[#f4f5f2]">
+            <h2 className="mt-3 font-sans text-[clamp(40px,6vw,64px)] font-extrabold leading-[.9] tracking-[-.065em] text-[#f4f5f2]">
               Academic Journey
             </h2>
-            <p className="mt-5 text-[13px] text-[#9aa5a1]">
+            <p className="mt-5 text-[13px] leading-5 text-[#9aa5a1]">
               A journey of continuous learning, growth and curiosity.
             </p>
             <div className="mt-8 border-l border-[#263836] pl-6 sm:pl-8">
               <article className="relative">
                 <span className="absolute -left-[31px] top-1 size-[13px] rounded-full border-2 border-[#07100b] bg-[#5ce688] shadow-[0_0_0_2px_#1eae65,0_0_12px_#39e77f] sm:-left-[39px]" />
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start justify-between gap-4 max-sm:block">
                   <div>
                     <h3 className="text-[20px] font-bold leading-tight tracking-[-.03em] text-[#e9efec]">
                       Bachelor of Computer Applications (BCA)
@@ -87,7 +87,7 @@ export function Education() {
                       Maulana Abul Kalam Azad University
                     </p>
                   </div>
-                  <span className="hidden shrink-0 rounded-full border border-[#164d2e] px-3 py-1 text-[9px] font-bold uppercase tracking-[.12em] text-[#54dd83] sm:block">
+                  <span className="mt-3 inline-block shrink-0 rounded-full border border-[#164d2e] px-3 py-1 text-[9px] font-bold uppercase tracking-[.12em] text-[#54dd83] sm:mt-0 sm:block">
                     Current
                   </span>
                 </div>
@@ -101,8 +101,8 @@ export function Education() {
               </article>
             </div>
           </div>
-          <div className="relative min-h-[300px] lg:min-h-[430px]">
-            <div className="absolute right-0 top-0 font-hand text-[27px] leading-[.9] italic text-[#a0aaa7]">
+          <div className="relative min-h-[280px] sm:min-h-[340px] lg:min-h-[430px]">
+            <div className="absolute right-0 top-0 font-hand text-[clamp(22px,3vw,27px)] leading-[.9] italic text-[#a0aaa7]">
               Still
               <br />
               learning...
@@ -119,14 +119,14 @@ export function Education() {
         </div>
 
         <div className="mt-10 border-t border-[#1d2a28] pt-4">
-          <div className="flex items-end justify-between gap-4">
+          <div className="flex items-end justify-between gap-4 max-sm:block">
             <div>
               <SectionLabel>Certifications</SectionLabel>
               <h3 className="mt-2 text-[16px] font-semibold tracking-[-.02em] text-[#dce4e1]">
                 Learning beyond the classroom.
               </h3>
             </div>
-            <div className="hidden items-center gap-3 text-[10px] text-[#7f8985] sm:flex">
+            <div className="mt-4 flex items-center gap-3 text-[10px] text-[#7f8985] sm:mt-0 sm:flex">
               Click a card to view
               <button aria-label="Previous certification" className="grid size-7 place-items-center rounded-full border border-[#26312f]">
                 <ChevronLeft size={13} />
@@ -136,7 +136,7 @@ export function Education() {
               </button>
             </div>
           </div>
-          <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {certifications.map((cert) => (
               <button
                 className="card-hover group overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#101716] text-left transition hover:-translate-y-1 hover:border-[#49a8ff77] hover:shadow-[0_12px_28px_rgba(0,0,0,.24)]"
@@ -144,7 +144,7 @@ export function Education() {
                 type="button"
                 onClick={() => setSelectedCertification(cert)}
               >
-                <div className="relative flex h-[142px] items-center justify-center overflow-hidden bg-[#e9edef] p-3">
+                <div className="relative flex h-[clamp(130px,24vw,142px)] items-center justify-center overflow-hidden bg-[#e9edef] p-3">
                   {cert.type === "image" ? (
                     <img
                       src={cert.preview}
