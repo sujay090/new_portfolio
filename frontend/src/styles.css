@@ -4,6 +4,63 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes certificate-modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes certificate-modal-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes certificate-modal-backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes certificate-modal-panel-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(12px) scale(.97);
+  }
+}
+
+.certificate-modal-backdrop {
+  animation: certificate-modal-backdrop-in 240ms ease-out both;
+}
+
+.certificate-modal-backdrop--closing {
+  animation: certificate-modal-backdrop-out 360ms ease-in both;
+}
+
+.certificate-modal-panel {
+  transform-origin: center;
+  animation: certificate-modal-panel-in 360ms cubic-bezier(.16, 1, .3, 1) 40ms both;
+}
+
+.certificate-modal-panel--closing {
+  animation: certificate-modal-panel-out 360ms ease-in both;
+}
+
 [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 34px, 0) scale(.97);
@@ -79,7 +136,9 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   html,
-  [data-reveal] {
+  [data-reveal],
+  .certificate-modal-backdrop,
+  .certificate-modal-panel {
     scroll-behavior: auto;
     opacity: 1;
     transform: none;
