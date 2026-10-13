@@ -82,7 +82,7 @@ export function Experience() {
           className="mt-[10px] w-[min(100%,1296px)] overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <div className="flex w-max gap-[50px]">
-            <div className="grid h-[312px] w-[600px] shrink-0 grid-cols-[.2fr_.8fr] overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#121919]/90">
+            <div className="card-hover grid h-[312px] w-[600px] shrink-0 grid-cols-[.2fr_.8fr] overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#121919]/90">
               <div className="relative overflow-hidden bg-gradient-to-br from-[#4a1d5f] via-[#24305f] to-[#0b233a] p-[14px] font-mono text-[9px] text-[#bca6ff]">
                 <div className="relative z-10">
                   01 /<br />
@@ -154,7 +154,7 @@ export function Experience() {
                 </div>
               </div>
             </div>
-            <div className="h-[312px] w-[600px] shrink-0 rounded-md border border-dashed border-[rgba(181,206,203,.13)] bg-[#0c1111]/70 p-[20px] text-[#83918e]">
+            <div className="card-hover h-[312px] w-[600px] shrink-0 rounded-md border border-dashed border-[rgba(181,206,203,.13)] bg-[#0c1111]/70 p-[20px] text-[#83918e]">
               <div className="flex h-11 w-11 items-center justify-center rounded-full border border-dashed border-[rgba(181,206,203,.2)] text-2xl font-light text-[#5b6664]">
                 +
               </div>
@@ -165,7 +165,7 @@ export function Experience() {
                 The next role or client project when it is ready.
               </p>
             </div>
-            <div className="h-[312px] w-[600px] shrink-0 rounded-md border border-dashed border-[rgba(181,206,203,.13)] bg-[#0c1111]/70 p-[20px] text-[#83918e]">
+            <div className="card-hover h-[312px] w-[600px] shrink-0 rounded-md border border-dashed border-[rgba(181,206,203,.13)] bg-[#0c1111]/70 p-[20px] text-[#83918e]">
               <div className="flex h-11 w-11 items-center justify-center rounded-full border border-dashed border-[rgba(181,206,203,.2)] text-2xl font-light text-[#5b6664]">
                 +
               </div>

@@ -44,11 +44,11 @@ export function AllProjects() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
-            <div className="rounded-xl border border-[#ffffff12] bg-[#151e1e]/80 p-4">
+            <div className="card-hover rounded-xl border border-[#ffffff12] bg-[#151e1e]/80 p-4">
               <p className="font-mono text-[9px] uppercase tracking-[.16em] text-[#83918e]">Projects</p>
               <p className="mt-2 text-3xl font-bold tracking-[-.06em] text-[#f0f5f3]">04</p>
             </div>
-            <div className="rounded-xl border border-[#ffffff12] bg-[#151e1e]/80 p-4">
+            <div className="card-hover rounded-xl border border-[#ffffff12] bg-[#151e1e]/80 p-4">
               <p className="font-mono text-[9px] uppercase tracking-[.16em] text-[#83918e]">Built with</p>
               <p className="mt-2 text-3xl font-bold tracking-[-.06em] text-[#49a8ff]">Intent</p>
             </div>
@@ -82,7 +82,7 @@ export function AllProjects() {
                   <span className="font-mono text-[10px] font-bold">0{index + 1}</span>
                 </div>
                 <article
-                  className={`group col-start-2 row-start-1 overflow-hidden rounded-xl border border-[rgba(181,206,203,.16)] bg-[#101717]/90 shadow-[0_18px_50px_rgba(0,0,0,.16)] transition duration-300 hover:-translate-y-1 hover:border-[#49a8ff66] md:col-span-1 ${
+                  className={`card-hover group col-start-2 row-start-1 overflow-hidden rounded-xl border border-[rgba(181,206,203,.16)] bg-[#101717]/90 shadow-[0_18px_50px_rgba(0,0,0,.16)] transition duration-500 ease-out hover:-translate-y-1 hover:translate-x-1 hover:border-[#49a8ff66] hover:shadow-[0_22px_55px_rgba(0,0,0,.24)] md:col-span-1 ${
                     index % 2 === 0 ? "md:col-start-1" : "md:col-start-3"
                   }`}
                 >

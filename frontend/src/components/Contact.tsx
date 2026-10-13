@@ -121,7 +121,7 @@ export function Contact({
               </svg>
             </div>
 
-            <div className="contact-channel-card relative mt-12 hidden h-[185px] max-w-[300px] overflow-hidden rounded-xl border border-[#39403f] bg-gradient-to-br from-[#202625] via-[#121716] to-[#080b0b] shadow-[inset_0_1px_0_rgba(225,235,232,.08),0_12px_30px_rgba(0,0,0,.2)] sm:block">
+            <div className="card-hover contact-channel-card relative mt-12 hidden h-[185px] max-w-[300px] overflow-hidden rounded-xl border border-[#39403f] bg-gradient-to-br from-[#202625] via-[#121716] to-[#080b0b] shadow-[inset_0_1px_0_rgba(225,235,232,.08),0_12px_30px_rgba(0,0,0,.2)] sm:block">
               <div className="absolute left-3 top-3 text-[8px] uppercase tracking-[.18em] text-[#a2aeaa]">
                 Open channel{" "}
                 <i className="ml-1 inline-block size-1.5 rounded-full bg-[#5ce688]" />
@@ -156,7 +156,7 @@ export function Contact({
               Great Things...
             </div>
             <form
-              className="rounded-xl border border-[#293735] bg-[#111817]/95 p-5 sm:p-6"
+              className="card-hover rounded-xl border border-[#293735] bg-[#111817]/95 p-5 sm:p-6"
               onSubmit={handleSubmit}
             >
               <div className="flex items-center justify-between">

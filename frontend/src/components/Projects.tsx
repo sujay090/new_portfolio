@@ -99,7 +99,7 @@ export function Projects() {
           </a>
         </div>
 
-        <article className="relative mt-7 grid min-h-[320px] overflow-hidden rounded-lg border border-[#49a8ff55] bg-[#121919]/90 lg:grid-cols-[.9fr_1.1fr]">
+        <article className="card-hover relative mt-7 grid min-h-[320px] overflow-hidden rounded-lg border border-[#49a8ff55] bg-[#121919]/90 lg:grid-cols-[.9fr_1.1fr]">
           <div className="z-10 p-7">
             <span className="rounded-full border border-[#49a8ff33] bg-[#49a8ff12] px-3 py-1 font-mono text-[8px] text-[#49a8ff]">
               Featured Project
@@ -138,7 +138,7 @@ export function Projects() {
         <div className="mt-4 grid gap-4 md:grid-cols-3">
           {secondary.map((project) => (
             <article
-              className="overflow-hidden rounded-lg border border-[rgba(181,206,203,.13)] bg-[#121919]/90"
+              className="card-hover overflow-hidden rounded-lg border border-[rgba(181,206,203,.13)] bg-[#121919]/90"
               key={project.title}
             >
               <ProjectArt art={project.art} />

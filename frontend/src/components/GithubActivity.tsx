@@ -66,7 +66,7 @@ export function GithubActivity() {
             </div>
           </div>
         </div>
-        <div className="mt-7 overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#121919]/90 p-5">
+        <div className="card-hover mt-7 overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#121919]/90 p-5">
           <div className="flex justify-between font-mono text-[9px] text-[#bdc9c5]">
             <span>114 contributions in 2026</span>
             <span>Current streak: 0 days</span>

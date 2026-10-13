@@ -186,7 +186,7 @@ export function TechStack() {
         <div className="mt-7 grid grid-cols-1 gap-3 md:grid-cols-3">
           {skills.map(([label, ...items], index) => (
             <div
-              className={`flex min-h-[80px] items-center justify-between rounded-lg border border-[rgba(181,206,203,.13)] px-[18px] ${cardGradients[index]}`}
+              className={`card-hover flex min-h-[80px] items-center justify-between rounded-lg border border-[rgba(181,206,203,.13)] px-[18px] ${cardGradients[index]}`}
               key={label}
             >
               <span className="text-[12px] font-semibold text-[#d7dfdc]">

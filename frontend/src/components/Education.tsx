@@ -139,7 +139,7 @@ export function Education() {
           <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
             {certifications.map((cert) => (
               <button
-                className="group overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#101716] text-left transition hover:-translate-y-1 hover:border-[#49a8ff77] hover:shadow-[0_12px_28px_rgba(0,0,0,.24)]"
+                className="card-hover group overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#101716] text-left transition hover:-translate-y-1 hover:border-[#49a8ff77] hover:shadow-[0_12px_28px_rgba(0,0,0,.24)]"
                 key={cert.title}
                 type="button"
                 onClick={() => setSelectedCertification(cert)}

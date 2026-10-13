@@ -21,7 +21,7 @@ function Greeting() {
 
 function FocusCard() {
   return (
-    <article className="rounded-lg border border-[#314043] bg-[#101718]/95 p-5 shadow-2xl shadow-black/20">
+    <article className="card-hover rounded-lg border border-[#314043] bg-[#101718]/95 p-5 shadow-2xl shadow-black/20">
       <div className="mb-5 flex items-center gap-2 font-mono text-[11px] font-medium text-[#49a8ff]">
         <span className="grid size-4 place-items-center border border-[#49a8ff]">
           ◌
@@ -75,7 +75,7 @@ function FocusCard() {
 
 function LearningCard() {
   return (
-    <article className="rounded-lg border border-[#314043] bg-[#101718]/95 p-5">
+    <article className="card-hover rounded-lg border border-[#314043] bg-[#101718]/95 p-5">
       <div className="mb-5 flex items-center gap-2 font-mono text-[11px] font-medium text-[#49a8ff]">
         <BookOpen size={15} />
         Currently Learning
@@ -98,7 +98,7 @@ function LearningCard() {
 
 function CodingCard() {
   return (
-    <article className="rounded-lg border border-[#314043] bg-[#101718]/95 p-5">
+    <article className="card-hover rounded-lg border border-[#314043] bg-[#101718]/95 p-5">
       <div className="mb-4 flex items-center gap-2 font-mono text-[11px] font-medium text-[#49a8ff]">
         <Code2 size={15} className="text-[#5ce688]" />
         Coding in 2026
