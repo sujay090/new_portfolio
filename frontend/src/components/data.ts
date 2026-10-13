@@ -32,21 +32,21 @@ export const projects: Project[] = [
     description:
       "A practical tool for reviewing code, spotting issues, and improving maintainability.",
     tags: ["React", "Node.js", "AI"],
-    art: "map",
+    art: "code-review",
   },
   {
     title: "Image Processing",
     description:
       "A reliable workspace for transforming, enhancing, and analyzing images.",
     tags: ["Python", "OpenCV", "API"],
-    art: "recipe",
+    art: "image-processing",
   },
   {
     title: "PDF Analyzer",
     description:
       "A focused tool for extracting insights, summarizing content, and analyzing PDF documents.",
     tags: ["Python", "FastAPI", "NLP"],
-    art: "landing",
+    art: "pdf-analyzer",
   },
 ];
 

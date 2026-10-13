@@ -46,7 +46,7 @@ export function Contact({
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[.78fr_1.22fr] lg:gap-[70px]">
           <div className="relative">
             <SectionLabel>Contact</SectionLabel>
-            <h2 className="mt-3 max-w-[570px] font-sans text-[clamp(40px,6vw,64px)] font-extrabold leading-[.84] tracking-[-.07em] text-[#f4f5f2]">
+            <h2 className="mt-3 max-w-[570px] font-sans text-[clamp(34px,6vw,64px)] font-extrabold leading-[.84] tracking-[-.07em] text-[#f4f5f2] sm:text-[clamp(40px,6vw,64px)]">
               <span className="whitespace-nowrap">
                 Let&apos;s Build{" "}
                 <span className="text-[#49a8ff]">Something</span>
