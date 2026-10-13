@@ -2,7 +2,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SectionLabel } from "./shared";
 import { projects } from "./data";
 
-function ProjectArt({ art }: { art: string }) {
+export function ProjectArt({ art }: { art: string }) {
   if (art === "vault") {
     return (
       <div className="relative h-full min-h-[260px] overflow-hidden bg-[#172426]">
@@ -59,7 +59,7 @@ function ProjectArt({ art }: { art: string }) {
   );
 }
 
-function Tags({ tags }: { tags: string[] }) {
+export function Tags({ tags }: { tags: string[] }) {
   return (
     <div className="mt-3 flex flex-wrap gap-1">
       {tags.map((tag) => (
@@ -93,7 +93,7 @@ export function Projects() {
           </div>
           <a
             className="mb-1 inline-flex items-center gap-1 border-b border-[#49a8ff88] pb-2 text-[10px] font-bold text-[#49a8ff]"
-            href="https://github.com"
+            href="/projects"
           >
             View All Projects <ArrowRight size={15} />
           </a>
@@ -105,14 +105,13 @@ export function Projects() {
               Featured Project
             </span>
             <h3 className="mt-6 max-w-[390px] text-[28px] font-bold leading-[1.05] tracking-[-.04em] text-[#f0f5f3]">
-              MeghVault — Cloud
+              IronCloude — Cloud
               <br />
-              Storage SaaS Platform
+              Cloud Storage Platform
             </h3>
             <p className="mt-4 max-w-[390px] text-[11px] leading-[1.5] text-[#a4aaa9]">
-              A scalable cloud storage platform for uploading, organizing, and
-              sharing files with role-based access control and reliable
-              delivery.
+              A scalable cloud storage platform for uploading, organizing,
+              syncing, and sharing files with role-based access control.
             </p>
             <Tags tags={["Next.js", "Node.js", "MongoDB", "Redis", "AWS", "CI/CD"]} />
             <div className="mt-4 flex gap-2">

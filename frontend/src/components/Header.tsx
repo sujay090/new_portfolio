@@ -11,10 +11,12 @@ const links = [
 ] as const;
 
 function Brand() {
+  const homePrefix = window.location.pathname === "/projects" ? "/" : "";
+
   return (
     <a
       className="relative inline-flex w-fit pb-1 font-hand text-[34px] font-medium leading-none text-[#f1f2ed]"
-      href="#top"
+      href={`${homePrefix}#top`}
       aria-label="Sujay Pradhan home"
     >
       Sujay Pradhan
@@ -37,6 +39,7 @@ function Brand() {
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const homePrefix = window.location.pathname === "/projects" ? "/" : "";
 
   return (
     <header className="relative z-20 mx-auto grid h-[86px] max-w-[1300px] grid-cols-[1fr_auto_1fr] items-center px-2">
@@ -53,7 +56,7 @@ export function Header() {
           <a
             key={label}
             className="whitespace-nowrap text-center leading-tight transition-colors hover:text-[#f1f2ed]"
-            href={href}
+            href={`${homePrefix}${href}`}
             onClick={() => setMenuOpen(false)}
           >
             {label}
@@ -63,7 +66,7 @@ export function Header() {
 
       <a
         className="justify-self-end rounded-md bg-[#42adf4] px-5 py-3 text-center text-[12px] font-bold leading-tight text-[#071c2c] transition hover:bg-[#4aa5f6] max-md:hidden"
-        href="#contact"
+        href={`${homePrefix}#contact`}
       >
         Let&apos;s Talk
       </a>

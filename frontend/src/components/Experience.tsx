@@ -83,7 +83,7 @@ export function Experience() {
         >
           <div className="flex w-max gap-[50px]">
             <div className="grid h-[312px] w-[600px] shrink-0 grid-cols-[.2fr_.8fr] overflow-hidden rounded-md border border-[rgba(181,206,203,.13)] bg-[#121919]/90">
-              <div className="relative overflow-hidden bg-gradient-to-br from-[#074d91] to-[#0b233a] p-[14px] font-mono text-[9px] text-[#72baff]">
+              <div className="relative overflow-hidden bg-gradient-to-br from-[#4a1d5f] via-[#24305f] to-[#0b233a] p-[14px] font-mono text-[9px] text-[#bca6ff]">
                 <div className="relative z-10">
                   01 /<br />
                   <span className="tracking-[.15em]">EXPERIENCE</span>
@@ -119,11 +119,11 @@ export function Experience() {
                   </span>
                   <span className="mx-2">·</span>2022 — Present
                 </p>
-                <p className="mt-4 text-[11px] leading-[1.45] text-[#a4aaa9]">
+                <p className="mt-4 text-[12px] leading-[1.45] text-[#a4aaa9]">
                   Building responsive web applications with a focus on clear
                   communication, reliable delivery, and maintainable code.
                 </p>
-                <ul className="mt-4 grid gap-2 text-[9px] leading-[1.35] text-[#9aa5a3]">
+                <ul className="mt-4 grid gap-2 text-[10px] leading-[1.35] text-[#9aa5a3]">
                   <li className="relative pl-3 before:absolute before:left-0 before:top-[.45em] before:h-1 before:w-1 before:rounded-full before:bg-[#49a8ff] before:shadow-[0_0_6px_#49a8ff]">
                     Developed responsive client-facing applications using React
                     and Node.js.

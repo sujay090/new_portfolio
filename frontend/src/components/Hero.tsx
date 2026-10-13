@@ -31,7 +31,7 @@ function FocusCard() {
       <p className="mb-4 text-[10px] text-[#7d8988]">Building &amp; learning</p>
       {[
         [
-          "Building MeghVault",
+          "Building IronCloude",
           "A better cloud storage experience.",
           "In progress",
           "bg-[#49a8ff]",
@@ -116,7 +116,10 @@ export function Hero() {
   return (
     <section className="min-h-[calc(100svh-7rem)]">
       <div className="hero-section-drift mx-auto grid max-w-[1300px] grid-cols-[.9fr_1.6fr_.88fr] items-center gap-8 px-2 pt-20 max-xl:grid-cols-[.85fr_1.35fr_.8fr] max-lg:grid-cols-2 max-lg:gap-5 max-md:block max-md:pt-14">
-        <div className="relative z-10 animate-hero-enter max-lg:col-span-1" data-reveal="left">
+        <div
+          className="relative z-10 animate-hero-enter max-lg:col-span-1"
+          data-reveal="left"
+        >
           <Greeting />
           <h1 className="font-sans text-[clamp(64px,6.3vw,92px)] font-extrabold leading-[.86] tracking-[-.075em] text-[#f4f5f2]">
             Sujay
@@ -160,7 +163,10 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative h-[650px] animate-hero-enter [animation-delay:180ms] max-lg:col-span-1 max-md:mt-10 max-md:h-[520px]" data-reveal="up">
+        <div
+          className="relative h-[650px] animate-hero-enter [animation-delay:180ms] max-lg:col-span-1 max-md:mt-10 max-md:h-[520px]"
+          data-reveal="up"
+        >
           <img
             src="/hero-chalk-stroke-v1.avif"
             alt=""
@@ -196,7 +202,10 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 max-lg:col-span-2 max-lg:grid max-lg:grid-cols-3 max-md:mt-8 max-md:block" data-reveal="right">
+        <div
+          className="flex flex-col gap-4 max-lg:col-span-2 max-lg:grid max-lg:grid-cols-3 max-md:mt-8 max-md:block"
+          data-reveal="right"
+        >
           <div className="animate-hero-enter [animation-delay:320ms]">
             <FocusCard />
           </div>

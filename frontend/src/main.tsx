@@ -1,6 +1,7 @@
 import { type ChangeEvent, type FormEvent, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { Contact } from "./components/Contact";
+import { AllProjects } from "./components/AllProjects";
 import { Education } from "./components/Education";
 import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
@@ -79,6 +80,9 @@ function App() {
       ...current,
       [event.target.name]: event.target.value,
     }));
+  if (window.location.pathname === "/projects") {
+    return <AllProjects />;
+  }
   return (
     <div className="min-h-screen overflow-hidden bg-[#080b0b] bg-[url('/chalk-background.webp')] bg-cover bg-fixed bg-center bg-no-repeat font-sans text-[#f0f5f3]">
       <Header />

@@ -20,31 +20,32 @@ type Status = {
 
 export const projects: Project[] = [
   {
-    title: "MeghVault — Cloud storage",
+    title: "IronCloude — Cloud storage",
     description:
-      "A secure, beautifully simple workspace for uploading, organizing, and sharing files.",
+      "A secure cloud storage workspace for uploading, organizing, syncing, and sharing files.",
     tags: ["React", "Node.js", "Postgres"],
     className: "col-span-3 grid grid-cols-2",
     art: "vault",
   },
   {
-    title: "WordWise — Travel map",
+    title: "Code Reviewer",
     description:
-      "A playful way to collect places, notes, and memories as you explore.",
-    tags: ["Next.js", "Maps"],
+      "A practical tool for reviewing code, spotting issues, and improving maintainability.",
+    tags: ["React", "Node.js", "AI"],
     art: "map",
   },
   {
-    title: "Yum — Recipe planner",
-    description: "A calm, smart kitchen companion for planning better meals.",
-    tags: ["React Native", "API"],
+    title: "Image Processing",
+    description:
+      "A reliable workspace for transforming, enhancing, and analyzing images.",
+    tags: ["Python", "OpenCV", "API"],
     art: "recipe",
   },
   {
-    title: "MeghVault landing page",
+    title: "PDF Analyzer",
     description:
-      "A conversion-focused marketing site for a cloud storage product.",
-    tags: ["Design", "Frontend"],
+      "A focused tool for extracting insights, summarizing content, and analyzing PDF documents.",
+    tags: ["Python", "FastAPI", "NLP"],
     art: "landing",
   },
 ];
