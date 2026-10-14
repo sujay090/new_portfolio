@@ -18,6 +18,7 @@ type FormState = {
   message: string;
 };
 type Status = { type: "" | "loading" | "success" | "error"; text: string };
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -130,10 +131,20 @@ function App() {
         className={`portfolio-loader ${isLoading ? "" : "portfolio-loader--hidden"}`}
       >
         <div className="portfolio-loader__glow" />
+        <div className="portfolio-loader__chalk-dust" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+          <i />
+          <i />
+        </div>
         <div className="portfolio-loader__content">
-          <p className="portfolio-loader__eyebrow">Welcome to my portfolio</p>
-          <p className="portfolio-loader__signature">Sujay Pradhan</p>
+          <p className="portfolio-loader__eyebrow">A little something is taking shape</p>
+          <div className="portfolio-loader__name-wrap">
+            <p className="portfolio-loader__signature">Sujay Pradhan</p>
+          </div>
           <span className="portfolio-loader__line" />
+          <p className="portfolio-loader__status">Loading experience</p>
         </div>
       </div>
     </>
