@@ -5,7 +5,7 @@ import { projects } from "./data";
 export function ProjectArt({ art }: { art: string }) {
   if (art === "vault") {
     return (
-      <div className="relative h-full min-h-[260px] overflow-hidden bg-[radial-gradient(circle_at_70%_20%,#254b58,#172426_55%,#101919)]">
+      <div className="relative h-full min-h-[210px] overflow-hidden bg-[radial-gradient(circle_at_70%_20%,#254b58,#172426_55%,#101919)] sm:min-h-[260px]">
         <div className="absolute left-[12%] top-[10%] h-[78%] w-[74%] rounded-lg border-[7px] border-[#202a2d] bg-[#f5f7f8] shadow-2xl">
           <div className="flex h-7 items-center gap-2 border-b border-[#dce2e5] bg-white px-3">
             <i className="size-2 rounded-full bg-[#ff8a80]" />
@@ -41,7 +41,7 @@ export function ProjectArt({ art }: { art: string }) {
 
   if (art === "code-review") {
     return (
-      <div className="relative h-full min-h-[155px] overflow-hidden bg-[#111b2b] p-4">
+      <div className="relative h-full min-h-[125px] overflow-hidden bg-[#111b2b] p-3 sm:min-h-[155px] sm:p-4">
         <div className="mx-auto h-full max-w-[360px] overflow-hidden rounded-lg border border-[#344966] bg-[#17243a] shadow-xl">
           <div className="flex h-7 items-center justify-between border-b border-[#344966] px-3 font-mono text-[8px] text-[#89a5c7]">
             <span>pull_request.ts</span>
@@ -66,7 +66,7 @@ export function ProjectArt({ art }: { art: string }) {
 
   if (art === "image-processing") {
     return (
-      <div className="relative h-full min-h-[155px] overflow-hidden bg-[linear-gradient(135deg,#222044,#513a72)] p-4">
+      <div className="relative h-full min-h-[125px] overflow-hidden bg-[linear-gradient(135deg,#222044,#513a72)] p-3 sm:min-h-[155px] sm:p-4">
         <div className="mx-auto flex h-full max-w-[360px] gap-3 rounded-lg border border-[#ffffff2b] bg-[#17152caa] p-3 shadow-xl">
           <div className="flex-1 overflow-hidden rounded bg-[radial-gradient(circle_at_65%_35%,#ffd27d,#e77b8b_34%,#3a326b_72%)]">
             <div className="mt-8 ml-8 h-16 w-16 rounded-full bg-[#ffd99555] blur-sm" />
@@ -86,7 +86,7 @@ export function ProjectArt({ art }: { art: string }) {
 
   if (art === "pdf-analyzer") {
     return (
-      <div className="relative h-full min-h-[155px] overflow-hidden bg-[#20232d] p-4">
+      <div className="relative h-full min-h-[125px] overflow-hidden bg-[#20232d] p-3 sm:min-h-[155px] sm:p-4">
         <div className="mx-auto h-full max-w-[360px] rounded-lg border border-[#41495b] bg-[#f3f5f6] p-3 shadow-xl">
           <div className="flex h-full gap-3">
             <div className="w-[52%] space-y-2 border-r border-[#d5dadd] pr-3">
@@ -183,17 +183,20 @@ export function Projects() {
           </a>
         </div>
 
-        <article className="card-hover relative mt-7 grid min-h-[320px] overflow-hidden rounded-lg border border-[#49a8ff55] bg-[#121919]/90 lg:grid-cols-[.9fr_1.1fr]">
-          <div className="z-10 p-5 sm:p-7">
+        <article className="card-hover relative mt-7 overflow-hidden rounded-lg border border-[#49a8ff55] bg-[#121919]/90">
+          <div className="min-h-[220px] lg:min-h-[320px]">
+            <ProjectArt art={featured.art} />
+          </div>
+          <div className="border-t border-[#ffffff10] bg-[#101717] p-5 sm:p-7">
             <span className="rounded-full border border-[#49a8ff33] bg-[#49a8ff12] px-3 py-1 font-mono text-[8px] text-[#49a8ff]">
               Featured Project
             </span>
-            <h3 className="mt-5 max-w-[390px] text-[clamp(24px,5vw,28px)] font-bold leading-[1.05] tracking-[-.04em] text-[#f0f5f3] sm:mt-6">
+            <h3 className="mt-4 max-w-[500px] text-[clamp(20px,4vw,26px)] font-bold leading-[1.05] tracking-[-.04em] text-[#f0f5f3]">
               IronCloude — Cloud
               <br />
               Cloud Storage Platform
             </h3>
-            <p className="mt-4 max-w-[390px] text-[11px] leading-[1.5] text-[#a4aaa9]">
+            <p className="mt-3 max-w-[540px] text-[11px] leading-[1.5] text-[#aeb8b5]">
               A scalable cloud storage platform for uploading, organizing,
               syncing, and sharing files with role-based access control.
             </p>
@@ -207,18 +210,6 @@ export function Projects() {
               </a>
             </div>
           </div>
-          <div className="min-h-[220px] lg:min-h-[320px]">
-            <ProjectArt art={featured.art} />
-          </div>
-          <div className="pointer-events-none absolute right-[15px] top-12 hidden font-hand text-[27px] leading-[.9] text-[#d7dcd9] lg:block">
-            From
-            <br />
-            Idea
-            <br />
-            to
-            <br />
-            Impact...
-          </div>
         </article>
 
         <div className="mt-4 grid gap-4 md:grid-cols-3">
@@ -228,9 +219,10 @@ export function Projects() {
               key={project.title}
             >
               <ProjectArt art={project.art} />
-              <div className="relative min-h-[154px] p-4 pb-12">
-                <h3 className="text-[16px] font-bold text-[#f0f5f3]">{project.title}</h3>
-                <p className="mt-2 text-[10px] leading-[1.45] text-[#a4aaa9]">{project.description}</p>
+              <div className="relative min-h-[154px] border-t border-[#ffffff10] bg-[#101717] p-4 pb-12">
+                <p className="font-mono text-[8px] uppercase tracking-[.16em] text-[#49a8ff]">Project summary</p>
+                <h3 className="mt-2 text-[15px] font-bold leading-tight text-[#f0f5f3]">{project.title}</h3>
+                <p className="mt-2 max-w-[30ch] text-[11px] leading-[1.5] text-[#aeb8b5]">{project.description}</p>
                 <Tags tags={project.tags} />
                 <a
                   className="absolute bottom-4 right-4 text-[#49a8ff]"

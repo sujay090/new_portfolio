@@ -19,6 +19,24 @@ type FormState = {
 };
 type Status = { type: "" | "loading" | "success" | "error"; text: string };
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let isMounted = true;
+    const minimumDisplayTime = new Promise<void>((resolve) => {
+      window.setTimeout(resolve, 1600);
+    });
+    const fontsReady = document.fonts?.ready ?? Promise.resolve();
+
+    Promise.all([minimumDisplayTime, fontsReady]).then(() => {
+      if (isMounted) setIsLoading(false);
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   useEffect(() => {
     const revealElements = document.querySelectorAll<HTMLElement>("[data-reveal]");
     const observer = new IntersectionObserver(
@@ -80,28 +98,45 @@ function App() {
       ...current,
       [event.target.name]: event.target.value,
     }));
-  if (window.location.pathname.replace(/\/+$/, "") === "/projects") {
-    return <AllProjects />;
-  }
+  const isProjectsPage =
+    window.location.pathname.replace(/\/+$/, "") === "/projects";
+
   return (
-    <div className="min-h-screen overflow-hidden bg-[#080b0b] bg-[url('/chalk-background.webp')] bg-cover bg-fixed bg-center bg-no-repeat font-sans text-[#f0f5f3]">
-      <Header />
-      <main id="top">
-        <Hero />
-        <Experience />
-        <GithubActivity />
-        <Projects />
-        <TechStack />
-        <Education />
-        <Contact
-          form={form}
-          status={status}
-          handleSubmit={handleSubmit}
-          updateForm={updateForm}
-        />
-      </main>
-      <Footer />
-    </div>
+    <>
+      {isProjectsPage ? (
+        <AllProjects />
+      ) : (
+        <div className="min-h-screen overflow-hidden bg-[#080b0b] bg-[url('/chalk-background.webp')] bg-cover bg-fixed bg-center bg-no-repeat font-sans text-[#f0f5f3]">
+          <Header />
+          <main id="top">
+            <Hero />
+            <Experience />
+            <GithubActivity />
+            <Projects />
+            <TechStack />
+            <Education />
+            <Contact
+              form={form}
+              status={status}
+              handleSubmit={handleSubmit}
+              updateForm={updateForm}
+            />
+          </main>
+          <Footer />
+        </div>
+      )}
+      <div
+        aria-hidden={!isLoading}
+        className={`portfolio-loader ${isLoading ? "" : "portfolio-loader--hidden"}`}
+      >
+        <div className="portfolio-loader__glow" />
+        <div className="portfolio-loader__content">
+          <p className="portfolio-loader__eyebrow">Welcome to my portfolio</p>
+          <p className="portfolio-loader__signature">Sujay Pradhan</p>
+          <span className="portfolio-loader__line" />
+        </div>
+      </div>
+    </>
   );
 }
 const root = document.getElementById("root");

@@ -86,14 +86,14 @@ export function AllProjects() {
                     index % 2 === 0 ? "md:col-start-1" : "md:col-start-3"
                   }`}
                 >
-                  <div className="relative min-h-[180px] sm:min-h-[210px]">
+                  <div className="relative min-h-[130px] sm:min-h-[210px]">
                     <ProjectArt art={project.art} />
                     <span className="absolute left-4 top-4 inline-flex items-center gap-1 rounded-full border border-white/20 bg-[#0b1111aa] px-2 py-1 font-mono text-[8px] uppercase tracking-[.12em] text-[#d7e3df] backdrop-blur">
                       <Check size={10} className="text-[#5ce688]" />
                       Shipped
                     </span>
                   </div>
-                  <div className="flex flex-col justify-between p-5 sm:p-8">
+                  <div className="flex flex-col justify-between border-t border-[#ffffff10] bg-[#101717] p-4 sm:p-8">
                     <div>
                       <div className="flex items-center justify-between gap-3">
                         <p className="font-mono text-[9px] uppercase tracking-[.18em] text-[#49a8ff]">
@@ -101,10 +101,10 @@ export function AllProjects() {
                         </p>
                         <CalendarDays size={14} className="text-[#526360]" />
                       </div>
-                      <h2 className="mt-4 text-[clamp(21px,6vw,25px)] font-bold leading-[1.05] tracking-[-.04em] text-[#f0f5f3]">
+                      <h2 className="mt-4 text-[clamp(19px,5vw,25px)] font-bold leading-[1.05] tracking-[-.04em] text-[#f0f5f3] sm:text-[25px]">
                         {project.title}
                       </h2>
-                      <p className="mt-4 text-[12px] leading-6 text-[#a4aaa9]">
+                      <p className="mt-3 text-[11px] leading-5 text-[#a4aaa9] sm:mt-4 sm:text-[12px] sm:leading-6">
                         {project.description}
                       </p>
                       <Tags tags={project.tags} />
